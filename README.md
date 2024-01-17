@@ -3,7 +3,6 @@
 **기술 면접을 대비하여 CS 관련 지식을 정리하는 Repository 입니다.**
 
 > 📢 이제 막 개발자를 꿈꾸는 신입 개발자들이 작성하는 Repo 입니다.
->
 > <br> :name_badge: 부족한 부분이 많을 수 있지만 면접을 준비하시면서 참고사항이 되었으면 좋겠습니다.
 
 ## 📌 Contents
@@ -11,10 +10,9 @@
 - [Database]()
 - [Network]()
 - [Operating System]()
-- [Interview]() <br><br>
+- [Interview]() 
 
 --- 
-
 
 ## 📚 DataStructure
 - [스택(Stack) & 큐(Queue)]()
@@ -27,7 +25,7 @@
 - [거품 정렬 & 선택 정렬 & 삽입 정렬]()
 - [퀵 정렬 & 병합 정렬 & 힙 정렬]()
 - [해시 테이블]()
-- [암호화 알고리즘]()
+- [암호화 알고리즘]() <br><br>
 
 ## <img src = "./Assets/img/Database.png"> Database
 - [키(Key) 정리]()
@@ -45,11 +43,15 @@
 - [DB Locking]()
 - [DB의 Connection Pool]()
 - [Trigger]()
-- [Redis]()
+- [Redis]() <br><br>
 
 ## <img src = "./Assets/img/Network.png"> Network
 
+<br><br>
+
 ## <img src = "./Assets/img/OS.png"> Operatin System
+
+<br><br>
 
 ## :octocat: Contributor
 
