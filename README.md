@@ -5,7 +5,10 @@
 **기술 면접을 대비하여 CS 관련 지식을 정리하는 Repository 입니다.**
 
 > 📢 이제 막 개발자를 꿈꾸는 신입 개발자들이 작성하는 Repo 입니다.
-> <br> :name_badge: 부족한 부분이 많을 수 있지만 면접을 준비하시면서 참고사항이 되었으면 좋겠습니다.
+> 
+> :name_badge: 부족한 부분이 많을 수 있지만 면접을 준비하시면서 참고사항이 되었으면 좋겠습니다.
+
+<br/>
 
 ## 📌 Contents
 - [DataStructure]()
@@ -87,4 +90,5 @@
 
 | [<img src="./Assets/img/penguin.png" width="100px">](https://github.com/noxknow) | [<img src="./Assets/img/nunori.jpeg" width="100px">](https://github.com/nunori) |[<img src="./Assets/img/hylee.jpg" width="100px">](https://github.com/hyleee)|[<img src="./Assets/img/sh.png" width="100px">](https://github.com/Hellooosir)|[<img src="./Assets/img/hyolim.png" width="100px">](https://github.com/hlleee2020)|[<img src="./Assets/img/yejin.png" width="100px">](https://github.com/songsongyejin)|[<img src="./Assets/img/yoonha.png" width="100px">](https://github.com/yoonha97)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 치왕 | 재성 | 혜윤 | 성환 | 효림 | 예진 | 윤하 |x``
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 치왕 | 재성 | 혜연 | 성환 | 효림 | 예진 | 윤하 |x``
