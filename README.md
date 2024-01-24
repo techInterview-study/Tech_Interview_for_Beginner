@@ -1,6 +1,6 @@
 # Tech_Interview_for_Beginner 📖
 
-<img src="./Assets/img/studyLogo.png" width = "600px" alt = "study logo">
+<img src="./Assets/img/csStudy.png" width = "800px" alt = "study logo">
 
 **기술 면접을 대비하여 CS 관련 지식을 정리하는 Repository 입니다.**
 
