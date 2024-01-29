@@ -239,6 +239,98 @@ RB 트리에서 노드를 삭제할 때 어떤 색이 삭제되는 지가 속성
 | <img src=".\img\ds_red_black_tree_38.png"> | <img src=".\img\ds_red_black_tree_39.png"> |
 | ------------------------------------------ | ------------------------------------------ |
 
+## 🌳 6.3 삭제되는 색이 black일 때 2.2 위반 해결하기
+
+### 💡 루트 노드를 black으로 바꾼다.
+
+삭제되는 색이 black일 때, 특수한 상황을 제외하면 2.5 속성을 항상 위반하게 된다.
+
+### 💡 삭제되는 색이 black이고 2.5 위반일 때 **extra black** 부여
+
+- 경로에서 black 수를 카운트 할 때 extrea black은 하나의 black으로 카운트 된다.
+- extra black을 부여받은 노드는 doubly black이 되거나, red-and-black이 된다.
+
+| <img src=".\img\ds_red_black_tree_40.png"> | <img src=".\img\ds_red_black_tree_41.png"> | <img src=".\img\ds_red_black_tree_42.png"> |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+
+- 10 삭제
+- 어디에 extra black을 부여해야하나? 삭제된 색의 위치를 대체한 노드!
+- 삭제된 색은 10의 black이므로 10의 위치를 대체한 노드인 nil 노드에 extra black을 부여
+- 2.5 속성 다시 만족
+- **doubly black**: extra black이 부여된 black 노드
+
+| <img src=".\img\ds_red_black_tree_43.png"> | <img src=".\img\ds_red_black_tree_44.png"> | <img src=".\img\ds_red_black_tree_45.png"> |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+
+- 30 삭제
+- 30은 자녀가 하나라서 삭제되는 색은 30의 black
+- 2.5 속성 위반이므로 extra black 부여
+- 삭제된 색은 30의 black이었으므로 30의 위치를 대체한 노드인 25에 extra black 부여
+- 2.5 속성 다시 만족
+- **red-and-black** : extra black이 부여된 red 노드
+
+### 💡 결론: extra black을 부여받은 노드는 doubly black이 되거나, red-and-black 이 된다.
+
+## 🌳 6.4 extra black 부여 후 red-and-black 해결하기
+
+### 💡 red-and-black을 black으로 바꾸면 해결
+
+| <img src=".\img\ds_red_black_tree_46.png"> | <img src=".\img\ds_red_black_tree_47.png"> | <img src=".\img\ds_red_black_tree_48.png"> |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+
+- 30 삭제
+- 30은 자녀가 하나라서 삭제되는 색은 30의 black -> 2.5 위반
+- 20과 25가 바로 연결되면서 2.4 위반
+- 30을 대체하는 25의 red에 extra black 부여
+- 25는 red-and-black이 됐으니 25를 black으로 바꿔주면 종료
+- 2.4와 2.5를 위반한 것을 동시에 해결.
+
+## 🌳 6.4 extra black 부여 후 doubly black 해결하기
+
+### 💡 extra black을 부여했더니 double black이 생겼다면 결국 extra black을 어떻게 없앨 것인지가 관건
+
+doubly black의 형제의 색과, 그 형제의 자녀들의 색을 기준으로 4가지 케이스로 분리 (15:00-26:00 대체)
+
+### 💡 6.4.1 doubly black의 오른쪽 형제가 black && 그 형제의 오른쪽 자녀가 red일 때
+
+#### 오른쪽 형제는 부모의 색으로, 오른쪽 형제의 오른쪽 자녀는 black으로, 부모는 black으로 바꾼 후에 부모를 기준으로 왼쪽으로 회전하면 해결
+
+<img src=".\img\ds_red_black_tree_50.png">
+
+### 💡 6.4.2 doubly black의 오른쪽 형제가 black && 그 형제의 왼쪽 자녀가 red && 그 형제의 오른쪽 자녀는 black일 때
+
+#### doubly black의 형제의 오른쪽 자녀가 red가 되게 만들어서 6.4.1 적용해 해결
+
+#### E 위치에 red가 오도록 만들기 위해 C와 D의 색을 바꾼 후에 D를 기준으로 오른쪽으로 회전하면 된다.
+
+#### C는 B의 색으로 B와 D는 black으로 바꾼 후 B를 기준으로 왼쪽으로 회전하면 해결
+
+| <img src=".\img\ds_red_black_tree_52.png"> | <img src=".\img\ds_red_black_tree_53.png"> | <img src=".\img\ds_red_black_tree_54.png"> |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+
+### 💡 6.4.3 doubly black의 형제가 black && 그 형제의 두 자녀 모두 black일 때
+
+doubly black과 그 형제의 black을 모아서 부모에게 전달해서 부모가 extra black을 해결하도록 위임한다.
+
+#### B가 red-and-black이 됐다면 black으로 바꿔주면 상황 종료
+
+#### B가 doubly black이 됐다면 B가 루트 노드라면 black으로 바꿔서 해결, 아닐 경우 다른 케이스로 해결
+
+| <img src=".\img\ds_red_black_tree_55.png"> | <img src=".\img\ds_red_black_tree_56.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+### 💡 6.4.4 doubly black의 오른쪽 형제가 red 일때
+
+부모와 형제의 색을 바꾸고 부모를 기준으로 왼쪽으로 회전한 뒤 doubly black을 기준으로 나머지 케이스 중 하나로 해결
+
+| <img src=".\img\ds_red_black_tree_57.png"> | <img src=".\img\ds_red_black_tree_58.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+## 🌳 6.5 Red-Black Tree vs AVL Tree
+
+| <img src=".\img\ds_red_black_tree_49.png"> | <img src=".\img\ds_red_black_tree_50.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
 # **📌7. 면접 빈출**
 
 ## 🌳 7.1 RB Tree란 무엇인가요?
