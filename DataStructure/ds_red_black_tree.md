@@ -291,40 +291,95 @@ RB 트리에서 노드를 삭제할 때 어떤 색이 삭제되는 지가 속성
 
 doubly black의 형제의 색과, 그 형제의 자녀들의 색을 기준으로 4가지 케이스로 분리 (15:00-26:00 대체)
 
-### 💡 6.4.1 doubly black의 오른쪽 형제가 black && 그 형제의 오른쪽 자녀가 red일 때
+### 💡 6.4.1 doubly black의 오른쪽 형제가 black && 그 형제의 오른쪽 자녀가 red일 때 (case#4)
+
+- 그 red를 doubly black 위로 옮기고, 옮긴 red로 extrablack을 전달해서 red-and-black으로 만들면 red-and-black을 black으로 바꿔서 해결할 수 있지 않을까?
+- red 를 왼쪽으로 보내기 위해서는 D의 위치가 red가 돼야한다.
+- 부모-자녀를 바꿔도 2.5 속성은 유지된다는 성질을 이용해보자
+- D의 balck을 C와 E로 보내고, D를 red로 바꿔주자.
+
+| <img src=".\img\ds_red_black_tree_51.png"> | <img src=".\img\ds_red_black_tree_59.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+- red가 왼쪽으로 넘어갈 수 있도록 왼쪽으로 회전하기 전에 B와 D의 색을 바꿔준다.
+  -B를 기준으로 왼쪽으로 회전시킨다. 그럼 2.5 만족
+
+| <img src=".\img\ds_red_black_tree_60.png"> | <img src=".\img\ds_red_black_tree_61.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+- A와 C의 extra black을 B로 올린다. 그렇게 해도 여전히 2.5 만족
+- B는 red-and-black이 됐기 때문에 B의 색을 black으로 바꿔서 extra black을 제거하면 문제 해결
+
+| <img src=".\img\ds_red_black_tree_62.png"> | <img src=".\img\ds_red_black_tree_63.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+#### 💡 결론
 
 #### 오른쪽 형제는 부모의 색으로, 오른쪽 형제의 오른쪽 자녀는 black으로, 부모는 black으로 바꾼 후에 부모를 기준으로 왼쪽으로 회전하면 해결
 
-<img src=".\img\ds_red_black_tree_50.png">
-
-### 💡 6.4.2 doubly black의 오른쪽 형제가 black && 그 형제의 왼쪽 자녀가 red && 그 형제의 오른쪽 자녀는 black일 때
-
-#### doubly black의 형제의 오른쪽 자녀가 red가 되게 만들어서 6.4.1 적용해 해결
-
-#### E 위치에 red가 오도록 만들기 위해 C와 D의 색을 바꾼 후에 D를 기준으로 오른쪽으로 회전하면 된다.
-
-#### C는 B의 색으로 B와 D는 black으로 바꾼 후 B를 기준으로 왼쪽으로 회전하면 해결
-
-| <img src=".\img\ds_red_black_tree_52.png"> | <img src=".\img\ds_red_black_tree_53.png"> | <img src=".\img\ds_red_black_tree_54.png"> |
+| <img src=".\img\ds_red_black_tree_64.png"> | <img src=".\img\ds_red_black_tree_65.png"> | <img src=".\img\ds_red_black_tree_66.png"> |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
 
-### 💡 6.4.3 doubly black의 형제가 black && 그 형제의 두 자녀 모두 black일 때
+### 💡 6.4.2 doubly black의 오른쪽 형제가 black && 그 형제의 왼쪽 자녀가 red && 그 형제의 오른쪽 자녀는 black일 때 (case#3)
 
-doubly black과 그 형제의 black을 모아서 부모에게 전달해서 부모가 extra black을 해결하도록 위임한다.
+- doubly black의 형제의 오른쪽 자녀가 red가 되게 만들어서 6.4.1 적용해 해결
+
+- E 위치에 red가 오도록 만들기 위해 (6.4.1과 유사하게 만들기 위해) C와 D의 색을 바꾼 후에 D를 기준으로 오른쪽으로 회전하면 된다.
+
+| <img src=".\img\ds_red_black_tree_67.png"> | <img src=".\img\ds_red_black_tree_68.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+| <img src=".\img\ds_red_black_tree_69.png"> | <img src=".\img\ds_red_black_tree_70.png"> | <img src=".\img\ds_red_black_tree_71.png"> |
+| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+
+- 이제 case5를 적용해서 해결.
+
+- C는 B의 색으로, B와 D는 black으로 바꾼 후 B를 기준으로 왼쪽으로 회전하면 해결
+
+| <img src=".\img\ds_red_black_tree_72.png"> | <img src=".\img\ds_red_black_tree_73.png"> |
+| ------------------------------------------ | ------------------------------------------ |
+
+#### 💡 결론
+
+#### doubly black의 형제인 오른쪽 자녀를 red가 되게 만들어서 이후엔 cse4를 적용하여 해결
+
+---
+
+### 💡 6.4.3 doubly black의 형제가 black && 그 형제의 두 자녀 모두 black일 때 (case#2)
+
+- A와 A의 형제인 D의 black을 모아서 부모에게 전달하게 되면 A와 D에서 black을 모았기 때문에 A는 여전히 black이고 D는 red가 된다.
+
+- black을 전달 받은 B는 red-and-black 혹은 doubly-black이 된다. 이러나 저러나 2.5 속성은 만족!
 
 #### B가 red-and-black이 됐다면 black으로 바꿔주면 상황 종료
 
-#### B가 doubly black이 됐다면 B가 루트 노드라면 black으로 바꿔서 해결, 아닐 경우 다른 케이스로 해결
+#### B가 doubly black이 됐다면 B가 루트 노드라면 black으로 바꿔서 해결, 아닐 경우 다른 케이스 중 하나로 해결
 
 | <img src=".\img\ds_red_black_tree_55.png"> | <img src=".\img\ds_red_black_tree_56.png"> |
 | ------------------------------------------ | ------------------------------------------ |
 
-### 💡 6.4.4 doubly black의 오른쪽 형제가 red 일때
+#### 💡 결론
 
-부모와 형제의 색을 바꾸고 부모를 기준으로 왼쪽으로 회전한 뒤 doubly black을 기준으로 나머지 케이스 중 하나로 해결
+#### doubly black과 그 형제의 black을 모아서 부모에게 전달해서 부모가 extra black을 해결하도록 위임한다.
+
+---
+
+### 💡 6.4.4 doubly black의 오른쪽 형제가 red 일때 (case#1)
+
+- B를 기준으로 왼쪽으로 회전하면 doubly black A의 형제는 C가 된다. 즉, black이 된다.
+
+- 만약 회전하게 되면 C는 B의 오른쪽 서브트리로 들어오면서 A와 형제를 이룬다. 그럼 결국 A의 형제가 black이 되면서 case 2,3,4 중 하나의 형태가 되어버린다.
+
+- 이 때, 회전 후에도 2.5 속성을 만족하려면 왼쪽으로 회전하기 전에 B와 D의 색을 바꿔준다.
 
 | <img src=".\img\ds_red_black_tree_57.png"> | <img src=".\img\ds_red_black_tree_58.png"> |
 | ------------------------------------------ | ------------------------------------------ |
+
+#### 💡 결론
+
+#### 부모와 형제의 색을 바꾸고 부모를 기준으로 왼쪽으로 회전한 뒤 doubly black을 기준으로 나머지 케이스 중 하나로 해결
+
+---
 
 ## 🌳 6.5 Red-Black Tree vs AVL Tree
 
