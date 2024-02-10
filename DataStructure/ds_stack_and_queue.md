@@ -355,7 +355,7 @@ public class ListStack<T> {
 public class QueueExample {
     
     public static void main(String[] args) {
-        Queue<Integer> queue = new Queue<>();
+        Queue<Integer> queue = new LinkedList<>();
 
         // add, offer 메서드로 요소 추가
         queue.add(1);
