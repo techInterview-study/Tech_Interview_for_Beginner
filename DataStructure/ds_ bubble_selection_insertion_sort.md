@@ -2,21 +2,22 @@
 
 ## 목차
 
-- [1. 🧪 Bubble Sort](#🧪-bubble-sort)
-  - [1.1 ⛓ Bubble Sort 예제](#⛓-bubble-sort-예제)
-  - [1.2 📚 Bubble Sort 특징](#📚-bubble-sort-특징)
-  - [1.3 🍁 Bubble Sort 시간복잡도](#🍁-bubble-sort-시간-복잡도)
-- [2. 🧪 Selection Sort](#🧪-selection-sort)
-  - [2.1 ⛓ Selection Sort 예제](#⛓-selection-sort-예제)
-  - [2.2 📚 Selection Sort 특징](#📚-selection-sort-특징)
-  - [2.3 🍁 Selection Sort 시간복잡도](#🍁-selection-sort-시간-복잡도)
-- [3. 🧪 Insertion Sort](#🧪-insertion-sort)
-  - [3.1 ⛓ Insertion Sort 예제](#⛓-insertion-sort-예제)
-  - [3.2 📚 Insertion Sort 특징](#📚-insertion-sort-특징)
-  - [3.3 🍁 Insertion Sort 시간복잡도](#🍁-insertion-sort-시간-복잡도)
-- [4. 🧪 제자리 정렬](#🧪-제자리-정렬)
-- [5. 🧪 안정 정렬](#🧪-안정-정렬)
-- [6. 참조](#-참조)
+- [1. 🧪 Bubble Sort](#-bubble-sort)
+  - [1.1 ⛓ Bubble Sort 예제](#-bubble-sort-예제)
+  - [1.2 📚 Bubble Sort 특징](#-bubble-sort-특징)
+  - [1.3 🍁 Bubble Sort 시간복잡도](#-bubble-sort-시간-복잡도)
+- [2. 🧪 Selection Sort](#-selection-sort)
+  - [2.1 ⛓ Selection Sort 예제](#-selection-sort-예제)
+  - [2.2 📚 Selection Sort 특징](#-selection-sort-특징)
+  - [2.3 🍁 Selection Sort 시간복잡도](#-selection-sort-시간-복잡도)
+- [3. 🧪 Insertion Sort](#-insertion-sort)
+  - [3.1 ⛓ Insertion Sort 예제](#-insertion-sort-예제)
+  - [3.2 📚 Insertion Sort 특징](#-insertion-sort-특징)
+  - [3.3 🍁 Insertion Sort 시간복잡도](#-insertion-sort-시간-복잡도)
+- [4. 🧪 정렬 알고리즘의 특징별 분류](#-정렬-알고리즘의-특징별-분류)
+- [5. 🧪 제자리 정렬](#-제자리-정렬)
+- [6. 🧪 안정 정렬](#-안정-정렬)
+- [7. 참조](#-참조)
 
 ## 🧪 Bubble Sort
 
@@ -294,9 +295,44 @@ void insertionSort(int[] arr) {
 
 ---
 
+## 🧪 정렬 알고리즘의 특징별 분류
+
+- 정렬 수행시 데이터 저장 위치에 따른 분류 
+    - 내부 정렬 (internal sort) 
+        - 정렬 전 모든 데이터가 주기억장치에 올라와있음
+        - 따라서, 대용량 데이터에는 적용 어려움 
+        - 例) 교환 정렬, 삽입 정렬, 선택 정렬 등 
+    - 외부 정렬 (external sort) 
+        - 정렬 전 모든 데이터가 외부기억장치에 있고, 
+        - 필요시 일부분씩 만 주기억장치에 올려 정렬 
+        - 속도가 느린 외부 보조기억장치를 사용하므로, 내부 정렬 보다 느림 
+        - 例) 병합 정렬 등  <br/>
+
+- 정렬 수행시 저장공간 필요량에 따른 분류
+    - 제자리 정렬  (in-place sort : in-place 정렬)
+        - 입력 자료에 할당된 메모리 이외 일정 상수 만큼 작은 추가 메모리 만 필요
+        - 즉, 입력 크기가 커지더라도 추가 저장공간이 필요치 않음
+        - 例) 교환 정렬, 삽입 정렬, 선택 정렬, 힙 정렬 등 <br/>
+
+- 정렬의 안정함에 따른 분류
+    - 안정함 (stable sort : 안정 정렬)
+        - 입력 자료의 순서 그대로 정렬
+        - 입력 자료 키 값이 같을 경우에도, 입력되는 순서 그대로 유지됨
+        - 例) 버블 정렬, 병합 정렬 등 
+    - 안정하지 못함 (nonstable sort)
+        - 입력 자료의 순서가 바뀔 수 있는 정렬
+        - 다중 키 정렬시, 먼저 정렬한 내용이 보존되지 않는 경우
+        - 例) 선택 정렬, 퀵 정렬 등
+
+<br/>
+
+---
+
 ## 🧪 제자리 정렬
 
-🔹 in-place 정렬은 추가적인 공간이 필요하지 않은 정렬이다. merge sort나 quick sort 처럼 요소를 분할하면서 추가적인 공간을 필요로 하지 않은 정렬이다. 현재 배열 안에서 정렬이 다 이뤄지는 것이다. 이러한 정렬에는 버블, 삽입, 선택 정렬 등이 있다.
+🔹 in-place 정렬은 추가적인 공간이 필요하지 않은 정렬이다. merge sort나 quick sort 처럼 요소를 분할하면서 추가적인 공간을 필요로 하지 않은 정렬이다. 현재 배열 안에서 정렬이 다 이뤄지는 것이다. 이러한 정렬에는 버블, 삽입, 선택, 힙 정렬 등이 있다. 
+
+이 중에서 퀵 정렬(Quick Sort)은 전통적으로 제자리 정렬 알고리즘은 아니다. 퀵 정렬은 일반적으로 추가적인 공간을 사용하여 정렬을 수행하며, 분할 정복(divide and conquer) 방식을 사용하여 배열을 정렬한다. 그러나 퀵 정렬을 제자리 정렬로 변형할 수 있는 방법이 있다. 이를 위해서 재귀적인 호출을 줄이거나, 추가적인 공간을 사용하지 않고도 배열 내에서 요소의 위치를 변경하는 방법을 사용해야 한다. 이런 변형들을 통해 제자리 퀵 정렬(In-place Quick Sort)을 만들 수 있다.
 
 in-place 정렬의 경우, 연속된 메모리를 한 번 받아 더 이상 메모리를 할당 받는 일이 없다. 한 번에 연속된 메모리에서 데이터들이 저장되는 것이다. 반면 in-place 정렬이 아닌 퀵이나 합병 정렬의 경우, 새로운 메모리를 계속 할당 받는데, 이러한 메모리들은 연속적이지 않아 지역성이 좋지 못하다. 
 
@@ -332,4 +368,5 @@ in-place 정렬의 경우, 연속된 메모리를 한 번 받아 더 이상 메�
 
 https://gmlwjd9405.github.io/2018/05/06/algorithm-bubble-sort.html <br/>
 https://gyoogle.dev/blog/algorithm/Bubble%20Sort.html <br/>
-https://blog.naver.com/wjdwoaud159/222365210954
+https://blog.naver.com/wjdwoaud159/222365210954 <br/>
+http://www.ktword.co.kr/test/view/view.php?m_temp1=5228
