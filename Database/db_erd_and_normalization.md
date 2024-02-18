@@ -226,7 +226,7 @@
 - Entity는 네 부분의 모서리가 둥근 형태인 Soft-Box로 표현
 - Entity 이름은 Box 내부 상단에 표시
 - Attribute 중 **필수로 값을 입력하며 식별자인 속성은 `#`**를 표시
-- Attribute 중 **필수로 값을 입력하여야 하는 속성은 ` `** 를 표시
+- Attribute 중 **필수로 값을 입력하여야 하는 속성은 `*`** 를 표시
 - Attribute 중 **선택적인 입력을 하여야 하는 속성은 `o`** 를 표시
     
     <image src="./img/db_erd_and_normalization_12.png" width = "400px" height="350px" alt = "barker img" >
@@ -238,7 +238,7 @@
 
 ### UML 표기법 (Unified Modeling Language Notation)
 
-- UML은 객체 지향 시스템의 모델링을 위한 표준화된 표기법입니다. 클래스 다이어그램을 사용하여 엔티티와 관계를 나타낸다.
+- UML은 객체 지향 시스템의 모델링을 위한 표준화된 표기법이다. 클래스 다이어그램을 사용하여 엔티티와 관계를 나타낸다.
 - 데이터베이스의 모델링을 위한 기법이 아니라 객체지향 모델링 표기법이였다가 데이터베이스까지 그 영향을 끼침.
 
 <image src="./img/db_erd_and_normalization_10.png" width = "400px" height="350px" alt = "uml notation img" >
