@@ -20,17 +20,17 @@
 --- 
 
 ## 📚 DataStructure
-- [스택(Stack) & 큐(Queue)]()
-- [Array & LinkedList]()
-- [Tree]()
-- [이진탐색트리 (Binary Search Tree)]()
-- [Red-Black Tree]()
-- [Graph]()
-- [힙(Heap)]()
-- [거품 정렬 & 선택 정렬 & 삽입 정렬]()
-- [퀵 정렬 & 병합 정렬 & 힙 정렬]()
-- [해시 테이블]()
-- [암호화 알고리즘]() <br><br>
+- [스택(Stack) & 큐(Queue)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_stack_and_queue.md)
+- [Array & LinkedList](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_array_and_linkedlist.md)
+- [Tree](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_tree.md)
+- [이진탐색트리 (Binary Search Tree)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_binary_search_tree.md)
+- [Red-Black Tree](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_red_black_tree.md)
+- [Graph](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_graph.md)
+- [힙(Heap)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_heap.md)
+- [거품 정렬 & 선택 정렬 & 삽입 정렬](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_bubble_selection_insertion_sort.md)
+- [퀵 정렬 & 병합 정렬 & 힙 정렬](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_quick_merge_heap_sort.md)
+- [해시 테이블](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_hash_table.md)
+- [암호화 알고리즘](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_encryption_algorithm.md) <br><br>
 
 ## <img src = "./Assets/img/Database.png"> Database
 - [키(Key) 정리]()
