@@ -5,18 +5,18 @@
 
 ### 1.정의와 성질
 
-<img src="./ds_array_and_linkedlist_array_definition.png">
+<img src="img\ds_array_and_linkedlist_linkedlist_definition1.png">
 
-<img src="ds_array_and_linkedlist_array_properties.png">
+<img src="img\ds_array_and_linkedlist_array_properties.png">
 
 캐시 히트율 이란, 캐시된 데이터를 요청할 때 해당 키 값이 메모리에 존재하여 얼마만큼의 비율로 잘 찾았는지에 대한 여부를 말합니다. 캐시 데이터를 잘 찾았다면 Cache hits 이라고 하며 반대로 캐시가 존재하지 않아 찾지 못했을 경우 Cache Misses 라고 합니다. 캐시 히트율이 높다는 것은 데이터베이스에서 읽어오는 비율보다 메모리에 캐시된 데이터를 읽어오는 비율이 높다는 의미이기 때문에 효율적으로 캐시를 사용하고 있다는 것입니다.  
 > 캐시 히트율 = Keyspace-hits / (Keyspace-hits + Keyspace-misses)
 
 ### 2. 기능
-<img src="ds_array_and_linkedlist_array_feature1.png">
-<img src="ds_array_and_linkedlist_array_feature2.png">
-<img src="ds_array_and_linkedlist_array_feature3.png">
-<img src="ds_array_and_linkedlist_array_feature4add.png">
+<img src="img/ds_array_and_linkedlist_array_feature1.png">
+<img src="img/ds_array_and_linkedlist_array_feature2.png">
+<img src="img/ds_array_and_linkedlist_array_feature3.png">
+<img src="img/ds_array_and_linkedlist_array_feature4add.png">
 <img src="./img/ds_array_and_linkedlist_array_feature5delete.png">
 
 ---
