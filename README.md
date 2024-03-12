@@ -33,22 +33,22 @@
 - [암호화 알고리즘](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/DataStructure/ds_encryption_algorithm.md) <br><br>
 
 ## <img src = "./Assets/img/Database.png"> Database
-- [키(Key) 정리]()
-- [ERD와 정규화 과정]()
-- [트랜잭션 개념과 ACID 속성]()
-- [트랜잭션 concurrency control(Serializability, Recoverable)]()
-- [트랜잭션 Isolation level(격리 수준)과 이상 현상]()
-- [SQL - JOIN]()
-- [인덱스(INDEX)]()
-- [스키마(Schema)]()
-- [저장 프로시저(Stored PROCEDURE)]()
-- [DBMS와 NoSQL]()
-- [RDB와 NoSQL에서의 클러스터링/레플리케이션 방식]()
-- [B-Tree & B+Tree]()
-- [DB Locking]()
-- [DB의 Connection Pool]()
-- [Trigger]()
-- [Redis]() <br><br>
+- [키(Key) 정리](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_key.md)
+- [ERD와 정규화 과정](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_erd_and_normalization.md)
+- [트랜잭션 개념과 ACID 속성](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_transaction_acid.md)
+- [트랜잭션 concurrency control(Serializability, Recoverable)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_transaction_concurrency_control.md)
+- [트랜잭션 Isolation level(격리 수준)과 이상 현상](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_transaction_anomalies_and_isolation_levels.md)
+- [SQL - JOIN](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_sql_join.md)
+- [인덱스(INDEX)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_index.md)
+- [스키마(Schema)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_schema.md)
+- [저장 프로시저(Stored PROCEDURE)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_stored_procedure.md)
+- [DBMS와 NoSQL](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_dbms_and_nosql.md)
+- [RDB와 NoSQL에서의 클러스터링/레플리케이션 방식](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_rdb_nosql_replication_and_clustering.md)
+- [B-Tree & B+Tree](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_B-tree_B%2BTree.md)
+- [DB Locking](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_locking.md)
+- [DB의 Connection Pool](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_connection_pool.md)
+- [Trigger](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_trigger.md)
+- [Redis](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Database/db_redis.md) <br><br>
 
 ## <img src = "./Assets/img/Network.png"> Network
 - [네트워크의 기초]()
