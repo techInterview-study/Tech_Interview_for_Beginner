@@ -1,18 +1,18 @@
 ## 목차
 
-- [1. 🎤 Stack & Queue](#🎤-stack--queue)
-- [2. 🎤 Array & ArrayList](#🎤-array--arraylist)
-- [3. 🎤 Bubble & Selection & Insertion Sort](#🎤-bubble--selection--insertion-sort)
-- [4. 🎤 Quick & Merge & Heap Sort](#🎤-quick--merge--heap-sort)
-- [5. 🎤 Graph](#🎤-graph)
-- [6. 🎤 Tree](#🎤-tree)
-- [7. 🎤 Binary Search Tree](#🎤-binary-search-tree)
-- [8. 🎤 Red Black Tree](#🎤-red-black-tree)
-- [9. 🎤 Encryption Algorithm](#🎤-encryption-algorithm)
-- [10. 🎤 Heap](#🎤-heap)
-- [11. 🎤 Hash Table](#🎤-hash-table)
+- [1. 🎤 Stack & Queue](#-stack--queue)
+- [2. 🎤 Array & ArrayList](#-array--arraylist)
+- [3. 🎤 Bubble & Selection & Insertion Sort](#-bubble--selection--insertion-sort)
+- [4. 🎤 Quick & Merge & Heap Sort](#-quick--merge--heap-sort)
+- [5. 🎤 Graph](#-graph)
+- [6. 🎤 Tree](#-tree)
+- [7. 🎤 Binary Search Tree](#-binary-search-tree)
+- [8. 🎤 Red Black Tree](#-red-black-tree)
+- [9. 🎤 Encryption Algorithm](#-encryption-algorithm)
+- [10. 🎤 Heap](#-heap)
+- [11. 🎤 Hash Table](#-hash-table) <br/><br/>
 
-## **🎤 Stack & Queue**
+## <span style="color: #FFA500">**🎤 Stack & Queue**</span>
 
 **Q. 스택과 큐에 대해서 간략하게 설명해주세요.**
 
@@ -50,7 +50,7 @@ A. Java에서는 `Stack` 클래스가 이미 구현되어 있어서 `new Stack<>
 
 대신, `Queue`를 구현하는 클래스들 중 하나인 `LinkedList` 구현체를 이용하여 Queue를 만들 수 있습니다. <br/><br/>
 
-## 🎤 Array & ArrayList
+## <span style="color: #FFA500">🎤 Array & ArrayList</span>
 
 **Q. Array와 LinkedList의 장/단점에 대해 설명해주세요.**
 
@@ -102,7 +102,7 @@ A. **`List`** 인터페이스를 구현하는 다양한 클래스들, 예를 들
 
 **`Set`** 인터페이스를 구현하는 몇 가지 주요 클래스 **`HashSet`**, **`TreeSet`**, **`LinkedHashSet`** 등으로 구현할 수 있다. <br/><br/>
 
-## **🎤 Bubble & Selection & Insertion Sort**
+## <span style="color: #FFA500">**🎤 Bubble & Selection & Insertion Sort**</span>
 
 **Q. 버블 정렬의 정의와 장단점에 대해 말해주세요.**
 
@@ -155,7 +155,7 @@ A. in-place 정렬의 경우, 연속된 메모리를 한 번 받아 더 이상 �
 
 이러한 in-place 정렬의 공간 지역성 덕분에, Insertion 정렬의 경우 소수의 원소들을 정렬할 때 merge나 quick보다 더 좋은 성능을 보이는 경우가 있습니다. <br/><br/>
 
-## **🎤 Quick & Merge & Heap Sort**
+## <span style="color: #FFA500">**🎤 Quick & Merge & Heap Sort**</span>
 
 **Q. 힙 정렬(Heap Sort)에 대해 설명해주세요.**
 
@@ -214,7 +214,7 @@ A.
 
 1. 불안정 정렬 : 따라서 동일한 값의 원소 간의 상대적 순서가 중요한 경우에는 다른 정렬 알고리즘을 고려해야함. <br/><br/>
 
-## 🎤 Graph
+## <span style="color: #FFA500">🎤 Graph</span>
 
 **Q. 그래프 자료구조란?**
 
@@ -268,7 +268,7 @@ A.
 
 A. BFS를 통해서 인접한 노드들을 탐색하면 최단 경로를 구할 수 있다. <br/><br/>
 
-## 🎤 Tree
+## <span style="color: #FFA500">🎤 Tree</span>
 
 Q. 그래프와 트리의 차이에 대해 설명해주세요
 
@@ -287,7 +287,7 @@ A.
     - 즉, 트리의 높이는 트리 내의 최대 깊이와 같습니다.
     - 트리의 높이는 0부터 시작하여 가장 깊은 리프 노드까지의 경로에 포함된 에지의 수를 나타냅니다. <br/><br/>
 
-## 🎤 Binary Search Tree
+## <span style="color: #FFA500">🎤 Binary Search Tree</span>
 
 Q. Binary Search Tree와 Binary Tree에 대해 설명해주세요.
 
@@ -340,7 +340,7 @@ Q. AVL 트리란 무엇인지 설명해주세요
 
 A. AVL 트리는 균형 잡힌 이진 탐색 트리(Binary Search Tree)의 일종으로, 각 노드의 왼쪽 서브트리와 오른쪽 서브트리의 높이 차이(높이 균형 인수, balance factor)가 항상 -1, 0, 1로 유지되는 트리입니다. 이러한 균형 조건을 만족시키기 위해 삽입, 삭제 연산 시에 트리를 재조정합니다. <br/><br/>
 
-## 🎤 Red Black Tree
+## <span style="color: #FFA500">🎤 Red Black Tree</span>
 
 Q.  **RB Tree란 무엇인가요?**
 
@@ -364,7 +364,7 @@ Q. **다른 이진 탐색 트리 알고리즘들과 비교했을 때, 어떤 장
 
 A. Worst Case에서도 O(logN)의 탐색 시간으로 탐색하기 위해서는 자가 균형 이진 트리가 필요합니다. 자가 균형 이진 트리의 종류는 대표적으로 레드블랙 트리, AVL 트리가 있습니다. - AVL 트리는 레드블랙 트리보다 더 엄격하게 균형이 잡혀있기 때문에, 삽입과 삭제를 할 때 최악의 경우 더 많은 회전(rotation)을 필요로 합니다. 레드 블랙 트리는 실 사용에 효율적이고, 최악의 경우에도 우수한 실행 시간을 보입니다.  n개의 노드가 있을 때 O(logN)의 시간복잡도로 삽입, 삭제, 검색을 할 수 있는 장점이 있습니다. <br/><br/>
 
-## 🎤 Encryption Algorithm
+## <span style="color: #FFA500">🎤 Encryption Algorithm</span>
 
 Q. 단방향 암호화에 대해서 간단히 설명해주세요.
 
@@ -392,7 +392,7 @@ A.
     - 누구나 사용해야 하는 클라이언트 측에서 Public Key 사용
 - ex) RSA <br/><br/>
 
-## 🎤 Heap
+## <span style="color: #FFA500">🎤 Heap</span>
 
 **Q. Heap이란 무엇이며, Max Heap과 Min Heap의 차이는 무엇인가요?**
 
@@ -435,7 +435,7 @@ A. 모두 이진 트리(Binary Tree)를 기반으로 한 자료구조이지만 �
 
 또한, 탐색 방법에서도 힙은 보통 최대값 또는 최소값을 빠르게 찾기 위해 사용됩니다. 이진 탐색이 아닌 상대적인 크기에 따라 노드를 정렬하여 힙의 성질을 유지합니다. 이진 탐색 트리는 루트 노드부터 시작하여 탐색 대상 값을 현재 노드와 비교하고, 대상 값이 현재 노드보다 작으면 왼쪽 서브트리를, 크면 오른쪽 서브트리를 탐색합니다. <br/><br/>
 
-## 🎤 Hash Table
+## <span style="color: #FFA500">🎤 Hash Table</span>
 
 Q. 해시 테이블이란 무엇인지 간단히 설명해주세요
 
