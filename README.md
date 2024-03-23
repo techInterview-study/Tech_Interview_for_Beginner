@@ -11,11 +11,11 @@
 <br/>
 
 ## 📌 Contents
-- [DataStructure]()
-- [Database]()
-- [Network]()
-- [Operating System]()
-- [Interview]() 
+- [DataStructure](https://github.com/techInterview-study/Tech_Interview_for_Beginner/tree/main/DataStructure)
+- [Database](https://github.com/techInterview-study/Tech_Interview_for_Beginner/tree/main/Database)
+- [Network](https://github.com/techInterview-study/Tech_Interview_for_Beginner/tree/main/Network)
+- [Operating System](https://github.com/techInterview-study/Tech_Interview_for_Beginner/tree/main/OS)
+- [Interview](https://github.com/techInterview-study/Tech_Interview_for_Beginner/tree/main/Interview) 
 
 --- 
 
