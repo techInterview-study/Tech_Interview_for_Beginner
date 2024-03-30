@@ -60,7 +60,7 @@ HTTP는 Application 계층에 속하고 정보를 텍스트로 주고 받기 때
 ## ⚙️ SSL / TLS 프로토콜
 
 <div align="center">
-    <img src = "./img/network_https_2.png" alt="암호화 이미지" width="350">
+    <img src = "./img/network_https_2.png" alt="암호화 이미지" width="500">
 </div> 
 
 <br/>
@@ -80,7 +80,7 @@ Transport Layer Security의 줄임말. 과거 SSL에서 발전하며 이름이 �
 SSL / TLS 프로토콜은 대칭과 비대칭 키 암호화 방식을 혼합한 하이브리드 암호화 방식을 사용한다.
 
 <div align="center">
-    <img src = "./img/network_https_3.png" alt="암호화 방식 이미지" width="700">
+    <img src = "./img/network_https_3.png" alt="암호화 방식 이미지" width="800">
 </div> 
 
 ### 🚧 문제점 1: 공통키 암호 한계, 도청 위험
@@ -122,7 +122,7 @@ Naver는 암호화는 공개키를 사용했고, 복호화는 비밀키를 사�
 ## ⛓ CA 공개키 증명서 인증 방식
 
 <div align="center">
-    <img src = "./img/network_https_4.png" alt="CA 공개키 증명 과정 이미지" width="550">
+    <img src = "./img/network_https_4.png" alt="CA 공개키 증명 과정 이미지" width="750">
 </div> 
 
 <br/>
@@ -145,7 +145,7 @@ Naver는 암호화는 공개키를 사용했고, 복호화는 비밀키를 사�
 ## 📌 HTTPS HandShake 통신 과정
 
 <div align="center">
-    <img src = "./img/network_https_5.png" alt="HandShake 이미지" width="550">
+    <img src = "./img/network_https_5.png" alt="HandShake 이미지" width="650">
 </div> 
 
 <br/>
