@@ -28,7 +28,7 @@
     - HDD & SSD
         - 장기적은 데이터 저장을 위한 장치
 
-### ✏️ OS(Operation System, 운영체제)
+### ✏️ OS(Operating System, 운영체제)
 - 운영체제
     > 시스템 자원을 관리하여 효율적인 컴퓨터 작동을 보장하고, GUI를 제공하여 컴퓨터와 상호작용 할 수 있는 방법을 제공
     - Hardware와 Software 리소스 관리
