@@ -16,7 +16,7 @@ CPU 이용률을 극대화하기 위해서는 멀티프로그래밍(multiprogram
 
 프로세스의 처리 순서는 스케줄링 큐로 관리된다. 대표적인 큐로 준비 큐와 대기 큐가 있다. 준비 큐는 CPU를 이용하고 싶은 프로세스들이 줄을 서는 큐이고, 대기 큐는 입출력장치를 이용하기 위해 대기 상태로 들어간 프로세스들이 서는 줄을 의미한다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_1.png" alt="os_cpu_scheduling_and_algorithm_1" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_1.png" alt="os_cpu_scheduling_and_algorithm_1" width=700></p>
 
 ## 선점형 스케줄링과 비선점형 스케줄링
 
@@ -51,19 +51,19 @@ CPU 사용시간이 긴 프로세스에 의해 사용시간이 짧은 프로세�
 호위 효과가 발생할 경우 CPU와 장치 이용률이 낮아진다.
 ```
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_2.png" alt="os_cpu_scheduling_and_algorithm_2" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_2.png" alt="os_cpu_scheduling_and_algorithm_2" width=700></p>
 
 ## 2. 최단 작업 우선 스케줄링
 
 호위 효과를 해결하기 위한 가장 단순한 방법은 CPU 사용 시간이 짧은 순서대로 실행하는 것이다. 이를 최단 작업 우선 스케줄링 혹은 SJF(Shortest Job First Scheduling) 스케줄링이라고 한다. 이는 비선점형 스케줄링이며 비슷한 알고리즘 중 선점형으로 구현된 것이 4번에서 소개할 최소 잔여 시간 우선 스케줄링이다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_3.png" alt="os_cpu_scheduling_and_algorithm_3" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_3.png" alt="os_cpu_scheduling_and_algorithm_3" width=700></p>
 
 ## 3. 라운드 로빈 스케줄링
 
 라운드 로빈 스케줄링(Round robin Scheduling)은 선입 선처리 스케줄링에 타임 슬라이스라는 개념이 추가된 것이다. 타임 슬라이스란 각 프로세스가 CPU를 사용할 수 있는 정해진 시간을 의미하고, 그 타임 슬라이스만큼 돌아가면서 CPU를 사용하는 알고리즘이다. 예를 들어 CPU 사용 시간이 11ms, 3ms, 7ms인 프로세스 A, B, C가 있고 타임 슬라이스는 4ms인 라운드 로빈 스케줄링을 한다면 아래 그림과 같이 수행된다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_4.png" alt="os_cpu_scheduling_and_algorithm_4" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_4.png" alt="os_cpu_scheduling_and_algorithm_4" width=700></p>
 
 라운드 로빈 스케줄링에서는 타임 슬라이스의 크기가 매우 중요하다. 타임 슬라이스가 지나치게 크면 선입 선처리 스케줄링과 다를 바가 없어 호위 효과가 발생할 수 있으며, 반대로 타임 슬라이스가 지나치게 작으면 문맥 교환에 드는 비용이 커져 프로세스 처리보다 프로세스 전환에 더욱 많은 자원을 사용할 수 있다.
 
@@ -81,7 +81,7 @@ CPU 사용시간이 긴 프로세스에 의해 사용시간이 짧은 프로세�
 
 다단계 큐 스케줄링은 우선순위 스케줄링의 업그레이드 버전이다. 각 우선순위별로 준비 큐를 여러 개 사용하는 방식으로, 우선순위가 가장 높은 큐에 있는 프로세스들을 먼저 처리하고 해당 큐가 비어있으면 다음 우선순위 큐로 넘어가는 방식이다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_5.png" alt="os_cpu_scheduling_and_algorithm_5" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_5.png" alt="os_cpu_scheduling_and_algorithm_5" width=700></p>
 
 이 방식의 장점으로는 프로세스 유형별로 우선순위를 구분하여 실행하기 편리하다는 것이다. 예를 들어 어떤 큐에는 우선순위가 비교적 높아야 하는 입출력 집중 프로세스를 삽입하고, 또 다른 큐에는 비교적 우선순위가 낮아도 되는 CPU 집중 프로세스를 삽입하는 것이 가능하다. 또한 큐별로 타임 슬라이스나 스케줄링 알고리즘을 다르게 사용할 수 있다.
 
@@ -93,15 +93,15 @@ CPU 사용시간이 긴 프로세스에 의해 사용시간이 짧은 프로세�
 
 우선 새로 들어오는 프로세스를 가장 높은 우선순위 큐에 삽입한 다음, 타임 슬라이스 안에 완료되지 않으면 다음 우선순위 큐로 삽입하는 것이다. 이렇게 함으로써 CPU를 비교적 오래 사용하는 CPU 집중 프로세스들은 자연스럽게 우선순위가 낮아지고, 입출력 집중 프로세스는 자연스럽게 높은 우선순위에서 실행이 완료된다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_6.png" alt="os_cpu_scheduling_and_algorithm_6" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_6.png" alt="os_cpu_scheduling_and_algorithm_6" width=700></p>
 
 다만 이렇게만 스케줄링한다면 낮은 우선순위로 내려간 프로세스들은 너무 오래 기다려야 한다는 단점이 있기 때문에 에이징 기법을 활용하여 낮은 우선순위 큐에서 높은 우선순위 큐로 이동시키는 방식 역시 적용한다. 이로써 기아 현상을 예방할 수 있다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_7.png" alt="os_cpu_scheduling_and_algorithm_7" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_7.png" alt="os_cpu_scheduling_and_algorithm_7" width=700></p>
 
 즉, 다단계 피드백 큐 스케줄링 알고리즘은 CPU 이용 시간이 길면 낮은 우선순위 큐로 이동시키고, 낮은 우선순위 큐에서 너무 오래 기다리면 높은 우선순위 큐로 이동시키는 알고리즘이다. 이 방식은 구현이 복잡하지만 가장 일반적인 CPU 스케줄링 알고리즘이라고 한다.
 
-<p align="center"><img src="img/os_cpu_scheduling_and_algorithm_8.png" alt="os_cpu_scheduling_and_algorithm_8" width=700></p>
+<p align="center"><img src="./img/os_cpu_scheduling_and_algorithm_8.png" alt="os_cpu_scheduling_and_algorithm_8" width=700></p>
 
 
 ### 출처
