@@ -1,4 +1,4 @@
-## <img src = "./Assets/img/Network.png"> Network
+## <img src = "../Assets/img/Network.png"> Network
 - [네트워크의 기초](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Network/network_basic.md)
 - [대역폭](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Network/network_bandwidth.md)
 - [OSI 7계층](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/Network/network_osi7layer.md)
