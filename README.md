@@ -68,7 +68,7 @@
 
 ## <img src = "./Assets/img/OS.png"> Operating System
 - [운영체제와 컴퓨터](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/OS/os_computer_and_os.md)
-- [메모리 계층](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/OS/os_memory_hierarchy.md)
+- [메모리 계층구조](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/OS/os_memory_hierarchy.md)
 - [프로세스와 스레드 & 멀티프로세스 와 멀티스레딩](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/OS/os_process%26thread.md)
 - [CPU 스케줄링 알고리즘](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/OS/os_cpu_scheduling_and_algorithm.md)
 - [인터럽트(Interrupt)](https://github.com/techInterview-study/Tech_Interview_for_Beginner/blob/main/OS/os_interrupt.md)
